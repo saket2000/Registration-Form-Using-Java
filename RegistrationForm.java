@@ -14,13 +14,13 @@ public class RegistrationForm extends JFrame {
     private JButton signupButton;
 
     public RegistrationForm() {
-        // Setting up the form
+        
         setTitle("Registration Form");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(5, 2));
 
-        // Creating the components
+      
         JLabel nameLabel = new JLabel("Name:");
         nameField = new JTextField();
 
@@ -35,7 +35,7 @@ public class RegistrationForm extends JFrame {
 
         signupButton = new JButton("Sign Up");
 
-        // Adding components to the form
+        
         add(nameLabel);
         add(nameField);
         add(emailLabel);
@@ -86,9 +86,9 @@ public class RegistrationForm extends JFrame {
     }
 
     private void saveToDatabase(String name, String email, String password) {
-        String url = "jdbc:mysql://localhost:3306/registration_db";  // Replace with your DB URL
-        String username = "root";  // Replace with your DB username
-        String dbPassword = "12345";  // Replace with your DB password
+        String url = "jdbc:mysql://localhost:3306/registration_db";  
+        String username = "root"; 
+        String dbPassword = "12345"; 
 
         String query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
 
